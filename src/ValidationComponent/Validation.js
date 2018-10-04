@@ -1,7 +1,7 @@
 import React from 'react';
-// import CharComponent from './../CharComponent/CharComponent';
 
-const ValidationComponent = (props) => {
+
+const Validation = (props) => {
     let validationMessage = 'You\'re Good!';
 
     if (props.inputLength <= 5) {
@@ -14,4 +14,4 @@ const ValidationComponent = (props) => {
     );
 };
 
-export default ValidationComponent;
+export default Validation;

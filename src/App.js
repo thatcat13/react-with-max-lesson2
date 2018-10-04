@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import ValidationComponent from './ValidationComponent/ValidationComponent';
-import CharComponent from './CharComponent/CharComponent';
+import Validation from './ValidationComponent/Validation';
+import Char from './CharComponent/Char';
 
 class App extends Component {
   state = {
@@ -21,7 +21,7 @@ class App extends Component {
 
   render() {
     const charList = this.state.userInput.split('').map((ch, index) => {
-      return <CharComponent
+      return <Char
         character={ch}
         key={index}
         clicked={() => this.deleteCharHandler(index)} />;
@@ -40,7 +40,7 @@ class App extends Component {
         <p>Hint: Keep in mind that JavaScript strings are basically arrays!</p> */}
         <input type='text' onChange={this.inputChangeHandler} value={this.state.userInput} />
         <p>{this.state.userInput}</p>
-        <ValidationComponent inputLength={this.state.userInput.length} />
+        <Validation inputLength={this.state.userInput.length} />
         { charList }
       </div>
     );

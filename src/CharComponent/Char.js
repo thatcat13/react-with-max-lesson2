@@ -1,7 +1,7 @@
 import React from 'react';
-import './CharComponent.css';
+import './Char.css';
 
-const CharComponent = (props) => {
+const Char = (props) => {
     return (
         <div className='boxStyling' onClick={props.clicked}>
             {props.character}
@@ -9,4 +9,4 @@ const CharComponent = (props) => {
     );
 };
 
-export default CharComponent;
+export default Char;
